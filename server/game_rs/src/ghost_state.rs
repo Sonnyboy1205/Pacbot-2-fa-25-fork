@@ -12,7 +12,7 @@ pub struct LocationState {
 pub struct GameState {}
 
 // Ghost - Pacmon ghost modeled
-#[derive(Clone, Serialize, Deserialize, Debug)]
+#[derive(Clone, Serialize, Deserialize)]
 pub struct GhostState {
   pub loc: LocationState, // Current location
 	pub next_loc: LocationState, // Planned location (for next update)

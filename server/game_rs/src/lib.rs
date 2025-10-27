@@ -1,7 +1,10 @@
 use pyo3::prelude::*;
 
 mod state;
+mod ghost_state;
 mod pyo3_bindings;
+mod commands;
+mod logging;
 
 #[pymodule]
 pub fn game_rs(m: &Bound<'_, PyModule>) -> PyResult<()> {

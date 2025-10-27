@@ -61,6 +61,7 @@ func (ge *GameEngine) quit() {
 // Quit function exported to other packages
 func (ge *GameEngine) Quit() {
 	close(ge.quitCh)
+	
 }
 
 // Start the game engine - should be launched as a go-routine

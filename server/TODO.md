@@ -8,6 +8,6 @@
 - [ ] Do Ghost Helpers 
 - [x] Do Ghost State - Kalil finish
 - [ ] Do Location 
-- [ ] Do Logging 
+- [x] Do Logging - Anirudh finished 
 - [ ] Do Serialize
 - [ ] Do Variables

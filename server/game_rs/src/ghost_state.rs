@@ -2,17 +2,17 @@
 
 use serde::{Deserialize, Serialize};
 
+use crate::state::GameState;
+
 // Position - A simple struct for the position of an object in PacMan
 #[derive(Clone, Serialize, Deserialize, Debug)]
 pub struct LocationState {
     pub x: i32,
     pub y: i32,
 }
-// Game - Empty state for game
-pub struct GameState {}
 
 // Ghost - Pacmon ghost modeled
-#[derive(Clone, Serialize, Deserialize)]
+#[derive(Clone, Serialize, Deserialize, Debug)]
 pub struct GhostState {
   pub loc: LocationState, // Current location
 	pub next_loc: LocationState, // Planned location (for next update)
@@ -32,7 +32,7 @@ impl GhostState {
             loc: LocationState {x:0, y:0},
             next_loc: LocationState {x:0, y:0},
             scatter_target : LocationState {x:0, y:0},
-            game: GameState{},
+            game: GameState::new(),
             color: 0,
             trapped_steps: 0,
             fright_steps: 0,
